@@ -1,7 +1,7 @@
 // const fs = require('fs');
 // const tours = JSON.parse(fs.readFileSync(`${__dirname}/../dev-data/data/tours-simple.json`));
 const Tour = require('../models/tourModel');
-
+const APIFeatures = require('../utils/apiFeatures');
 // exports.checkId = (req, res, next, val) => {
 //     console.log(`tour id: ${val}`);
 //     if (req.params.id * 1 > tours.length) {
@@ -23,31 +23,21 @@ const Tour = require('../models/tourModel');
 //     next();
 // };
 
+exports.aliasTopTours = (req, res, next) => {
+    req.query.limit = '5';
+    req.query.sort = '-ratingsAverage,price';
+    req.query.fields = 'name, price, ratingsAverage, summary, difficulty';
+    next();
+};
+
 exports.getAllTours = async (req, res) => {
     try {
-        // build query
-        // 1a) filtering
-        const queryObj = { ...req.query };
-        const excludeFields = ['page', 'sort', 'limit', 'fields'];
-
-        excludeFields.forEach((field) => {
-            delete queryObj[field];
-        });
-        console.log(req.query);
-        console.log(queryObj);
-
-        // 1b) advance filtering
-        let queryStr = JSON.stringify(queryObj);
-        queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
-        console.log(JSON.parse(queryStr));
-
-        const query = Tour.find(JSON.parse(queryStr));
-
-        // execute query
-        const tours = await query;
+        // EXECUTE QUERY
+        const features = new APIFeatures(Tour.find(), req.query).filter().sort().limitFields().paginate();
+        const tours = await features.query;
         // const query = Tour.find().where('duration').equals(5).where('difficulty').equals('easy');
 
-        //send response
+        //SEND RESPONSE
         res.status(200).json({
             status: 'success',
             arrivalTime: req.requestTime,
@@ -131,6 +121,95 @@ exports.deleteTour = async (req, res) => {
     } catch (err) {
         res.status(404).json({
             status: 'fail to delete tour',
+            message: err,
+        });
+    }
+};
+
+//  Aggregation Pipeline: Matching and Grouping
+exports.getTourStats = async (req, res) => {
+    try {
+        const tourStats = await Tour.aggregate([
+            {
+                $match: { ratingsAverage: { $gte: 4.5 } },
+            },
+            {
+                $group: {
+                    _id: { $toUpper: '$difficulty' },
+                    numTours: { $sum: 1 },
+                    numRatings: { $sum: '$ratingsQuantity' },
+                    avgRating: { $avg: '$ratingsAverage' },
+                    avgPrice: { $avg: '$price' },
+                    minPrice: { $min: '$price' },
+                    maxPrice: { $max: '$price' },
+                },
+            },
+            {
+                $sort: { avgPrice: 1 },
+            },
+        ]);
+
+        res.status(200).json({
+            status: 'success',
+            data: {
+                tourStats,
+            },
+        });
+    } catch (err) {
+        res.status(404).json({
+            status: 'fail to stats tours',
+            message: err,
+        });
+    }
+};
+
+exports.getMonthlyPlan = async (req, res) => {
+    try {
+        const year = req.params.year * 1;
+        const plan = await Tour.aggregate([
+            {
+                $unwind: '$startDates',
+            },
+            {
+                $match: {
+                    startDates: {
+                        $gte: new Date(`${year}-01-01`),
+                        $lte: new Date(`${year}-12-31`),
+                    },
+                },
+            },
+            {
+                $group: {
+                    _id: { $month: '$startDates' },
+                    numTourStarts: { $sum: 1 },
+                    tours: { $push: '$name' },
+                },
+            },
+            {
+                $addFields: { month: '$_id' },
+            },
+            {
+                $project: {
+                    _id: 0,
+                },
+            },
+            {
+                $sort: { month: 1 },
+            },
+            // {
+            //     $limit: 12,
+            // }
+        ]);
+
+        res.status(201).json({
+            status: 'success',
+            data: {
+                plan,
+            },
+        });
+    } catch (err) {
+        res.status(404).json({
+            status: 'fail to get monthly plan',
             message: err,
         });
     }
