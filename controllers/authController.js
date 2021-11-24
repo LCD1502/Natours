@@ -21,7 +21,7 @@ const createAndSendToken = (user, statusCode, res) => {
 
     if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
 
-    res.cookie('jwt', token, cookieOptions);
+    res.cookie('jwt', token, cookieOptions); //set cookie
     // Remove password after send it back to client
     user.password = undefined;
     res.status(statusCode).json({
@@ -69,6 +69,8 @@ exports.protect = catchAsync(async (req, res, next) => {
     let token;
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
         token = req.headers.authorization.split(' ')[1];
+    } else if (req.cookies.jwt) {
+        token = req.cookies.jwt;
     }
     //console.log(token);
     if (!token) {
@@ -94,6 +96,44 @@ exports.protect = catchAsync(async (req, res, next) => {
     req.user = freshUser;
     next();
 });
+
+// only for rendered pages, no errors !
+exports.isLoggedIn = async (req, res, next) => {
+    if (req.cookies.jwt) {
+        try {
+            //1) verification token
+            const decoded = await promisify(jwt.verify)(req.cookies.jwt, process.env.JWT_SECRET);
+
+            //2) check if user still exists
+            const freshUser = await User.findById(decoded.id);
+            if (!freshUser) {
+                return next();
+            }
+
+            //3) check if user changed password after the token was issued
+            if (freshUser.changedPasswordAfter(decoded.iat)) {
+                return next();
+            }
+
+            // THIS IS LOGGED IN USER
+            res.locals.user = freshUser;
+        } catch (err) {
+            return next();
+        }
+    }
+    next();
+};
+
+exports.logout = (req, res) => {
+    res.cookie('jwt', 'logged out', {
+        expires: new Date(Date.now() + 10 * 1000),
+        httpOnly: true,
+    });
+
+    res.status(200).json({
+        status: 'success',
+    });
+};
 
 exports.restrictTo =
     (...roles) =>
