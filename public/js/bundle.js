@@ -8931,7 +8931,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 //update data
 var updateData = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(name, email) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(data) {
     var res;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
@@ -8942,10 +8942,7 @@ var updateData = /*#__PURE__*/function () {
             return (0, _axios.default)({
               method: 'PATCH',
               url: '/api/v1/users/updateMe',
-              data: {
-                name: name,
-                email: email
-              }
+              data: data
             });
 
           case 3:
@@ -8971,7 +8968,7 @@ var updateData = /*#__PURE__*/function () {
     }, _callee, null, [[0, 7]]);
   }));
 
-  return function updateData(_x, _x2) {
+  return function updateData(_x) {
     return _ref.apply(this, arguments);
   };
 }();
@@ -9020,7 +9017,7 @@ var updatePassword = /*#__PURE__*/function () {
     }, _callee2, null, [[0, 7]]);
   }));
 
-  return function updatePassword(_x3, _x4, _x5) {
+  return function updatePassword(_x2, _x3, _x4) {
     return _ref2.apply(this, arguments);
   };
 }();
@@ -9322,9 +9319,11 @@ if (logoutBtn) logoutBtn.addEventListener('click', _login.logout);
 var userDataForm = document.querySelector('.form-user-data');
 if (userDataForm) userDataForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  (0, _updateSettings.updateData)(name, email);
+  var form = new FormData();
+  form.append('name', document.getElementById('name').value);
+  form.append('email', document.getElementById('email').value);
+  form.append('photo', document.getElementById('photo').files[0]);
+  (0, _updateSettings.updateData)(form);
 });
 var changePasswordForm = document.querySelector('.form-user-password ');
 if (changePasswordForm) changePasswordForm.addEventListener('submit', /*#__PURE__*/function () {
@@ -9388,7 +9387,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60353" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50274" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
