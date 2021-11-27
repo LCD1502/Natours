@@ -2,6 +2,14 @@ const Tour = require('../models/tourModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
+exports.getHome = catchAsync(async (req, res, next) => {
+    const toursDisplay = await Tour.find().sort('-ratingsAverage').limit(3);
+    res.status(200).render('home', {
+        title: 'Home',
+        tours: toursDisplay,
+    });
+});
+
 exports.getOverview = catchAsync(async (req, res, next) => {
     // 1) Get tour data from collection
     const tours = await Tour.find();

@@ -1,0 +1,232 @@
+extends base
+
+mixin tourDisplayCard(tour, icon, background)
+    .col.l-4.m-12.c-12
+        .container__promotion-item
+            .container__promotion-img-wrap 
+                img.container__promotion-img(src=`/img/tours/${tour.imageCover}`)
+                a.container__promotion-icon(href='' style='background: linear-gradient(to right, #ffd205 0%, #ff9b05 100%);')
+                    img(src=`./assets/img/${icon}.png`)
+            .container__promotion-content
+                .container__promotion-destination
+                    a.container__promotion-city(href='')
+                        h4= tour.name
+                    a.container__promotion-area(href='')
+                        img.container__promotion-destination-icon(src='./assets/img/pin_icon.png' alt='')
+                        h5= tour.startLocation.description
+                .container__promotion-info
+                    .container__promotion-category
+                        a(href='')= tour.difficulty
+                        div
+                            a(href='')= `${tour.duration} days`
+                            div(class=`container__promotion-category-plus background--${background}`)
+                                span= `${tour.ratingsAverage} / 5`
+                                .container__promotiom-category-plus-name= `${tour.ratingsQuantity} ratings`
+                    .container__promotion-price
+                        span.container__promotion-old-price
+                        span.container__promotion-current-price= `${tour.price} $`
+                .container__promotion-footer
+                    p.container__promotion-description= tour.summary
+                    a(class=`container__promotion-details-link background--${background}`, href=`/tour/${tour.slug}`) DETAILS
+
+block content 
+    .slider-home
+        .grid.wide
+            .slider-home-content
+                h1
+                    | Enjoy every 
+                    span Moments
+                h4 LIFE IS LIVE
+    .container
+        .grid.wide
+            .container-section
+                .container__title
+                    h5 OUR PROPOSALS
+                    h2
+                        | OUR 
+                        span DESTINATIONS
+                .container__proposals.row
+                    .col.l-4.m-12.c-12
+                        .container__proposal-item
+                            img.container__proposal-img(src='/img/tours/tour-1-cover.jpg')
+                            .container__proposal-overlay
+                            .container__proposal-fade-out
+                                //- .container__proposal-icon
+                                //-     img(src='./assets/img/destination-icon-1.png')
+                                .container__proposal-title
+                                    h4 Banff National Park
+                                    h5 and 2 locations
+                            .container__proposal-fade-in
+                                h4 The Forest Hiker
+                                .container__proposal-destinations
+                                a.container__proposal-view-btn(href='') VIEW TOUR
+                    .col.l-4.m-12.c-12
+                        .container__proposal-item
+                            img.container__proposal-img(src='/img/tours/tour-2-cover.jpg')
+                            .container__proposal-overlay
+                            .container__proposal-fade-out
+                                //- .container__proposal-icon
+                                //-     img(src='./assets/img/destination-icon-2.png')
+                                .container__proposal-title
+                                    h4 Lummus Park Beach
+                                    h5 and 3 locations
+                            .container__proposal-fade-in
+                                h4 The Sea Explorer
+                                .container__proposal-destinations
+                                a.container__proposal-view-btn(href='') VIEW TOUR
+                    .col.l-4.m-12.c-12
+                        .container__proposal-item
+                            img.container__proposal-img(src='/img/tours/tour-3-cover.jpg')
+                            .container__proposal-overlay
+                            .container__proposal-fade-out
+                                //- .container__proposal-icon
+                                //-     img(src='./assets/img/destination-icon-3.png')
+                                .container__proposal-title
+                                    h4 Aspen Highlands
+                                    h5 and 3 locations
+                            .container__proposal-fade-in
+                                h4 The Snow Adventurer
+                                .container__proposal-destinations
+                                a.container__proposal-view-btn(href='') VIEW TOUR
+                    .col.l-4.m-12.c-12
+                        .container__proposal-item
+                            img.container__proposal-img(src='/img/tours/tour-6-cover.jpg')
+                            .container__proposal-overlay
+                            .container__proposal-fade-out
+                                //- .container__proposal-icon
+                                //-     img(src='./assets/img/destination-icon-4.png')
+                                .container__proposal-title
+                                    h4 Point Dume Beach
+                                    h5 and 5 locations
+                            .container__proposal-fade-in
+                                h4 The Sports Lover
+                                .container__proposal-destinations
+                                a.container__proposal-view-btn(href='') VIEW TOUR
+                    .col.l-4.m-12.c-12
+                        .container__proposal-item
+                            img.container__proposal-img(src='/img/tours/tour-8-cover.jpg')
+                            .container__proposal-overlay
+                            .container__proposal-fade-out
+                                //- .container__proposal-icon
+                                //-     img(src='./assets/img/destination-icon-5.png')
+                                .container__proposal-title
+                                    h4 Natural Bridges National Monument
+                                    h5 and 3 locations
+                            .container__proposal-fade-in
+                                h4 The Star Gazer
+                                .container__proposal-destinations
+                                a.container__proposal-view-btn(href='') VIEW TOUR
+                    .col.l-4.m-12.c-12
+                        .container__proposal-item
+                            img.container__proposal-img(src='/img/tours/tour-9-cover.jpg')
+                            .container__proposal-overlay
+                            .container__proposal-fade-out
+                                //- .container__proposal-icon
+                                //-     img(src='./assets/img/destination-icon-6.png')
+                                .container__proposal-title
+                                    h4 Yellowknife
+                                    h5 only one location
+                            .container__proposal-fade-in
+                                h4 The Northern Lights
+                                .container__proposal-destinations
+                                a.container__proposal-view-btn(href='') VIEW TOUR
+        .container__banner
+            .grid.wide
+                .container__banner-wrap.row
+                    .container__banner-title.col.l-4.m-12.c-12
+                        h2 Your
+                        h1
+                            | Next 
+                            span Holiday
+                    .container__banner-view.col.l-4.m-12.c-12
+                        a(href='') VIEW ALL TOURS
+                        
+        //- .container__banner
+        //-     .grid.wide
+        //-         .container__banner-wrap.row
+        //-             .container__banner-title.col.l-4.m-12.c-12
+        //-                 h2 Your
+        //-                 h1
+        //-                     | Next 
+        //-                     span Holiday
+        //-             .container__banner-view.col.l-4.m-12.c-12
+        //-                 a(href='') VIEW ALL TOURS
+        .grid.wide
+            .container-section
+                .container__beaches.row
+                    .col.l-4.m-12.c-12
+                        .container__beaches-content
+                            .container__title
+                                h5 NORTH AMERICA
+                                h2 The Sea Explorer
+                            .container__beaches-description
+                                p
+                                    | Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                //- p
+                                //-     | Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                            .container__beaches-price
+                                span.container__beaches-price-old 800
+                                span.container__beaches-price-current    497 $ 
+                                span.container__beaches-price-for / FOR PERSON
+                            .container__beaches-book-btn
+                                a(href='') BOOK NOW
+                    .col.l-8.m-12.c-12
+                        .container__beaches-slider
+                            .container__beaches-slider-wrap
+                                .container__beaches-img
+                                .container__beaches-countdown.row
+                                    .container__beaches-countdown-item.col.l-2.m-3.c-3
+                                        h3 000
+                                        h5 Days
+                                    .container__beaches-countdown-item.col.l-2.m-3.c-3
+                                        h3 00
+                                        h5 Hours
+                                    .container__beaches-countdown-item.col.l-2.m-3.c-3
+                                        h3 00
+                                        h5 Minutes
+                                    .container__beaches-countdown-item.col.l-2.m-3.c-3
+                                        h3 00
+                                        h5 Seconds
+        .grid.wide
+            .container-section
+                .container__tours.row
+                    .col.l-4.m-12.c-12
+                        .container__tour-item
+                            img.container__tour-item-img(src='./assets/img/tour-1.png' alt='')
+                            .container__tour-item-content
+                                h3.container__tour-item-title World Tour
+                                p.container__tour-item-decs
+                                    | Lorem ipsum dolor sit amet conse ctetur adip
+                                    | iscing elit Proin rhonc us urna dictum.
+                                a.container__tour-item-link(href='') View More
+                    .col.l-4.m-12.c-12
+                        .container__tour-item
+                            img.container__tour-item-img(src='./assets/img/tour-2.png' alt='')
+                            .container__tour-item-content
+                                h3.container__tour-item-title Cruises
+                                p.container__tour-item-decs
+                                    | Lorem ipsum dolor sit amet conse ctetur adip
+                                    | iscing elit Proin rhonc us urna dictum.
+                                a.container__tour-item-link(href='') View More
+                    .col.l-4.m-12.c-12
+                        .container__tour-item
+                            img.container__tour-item-img(src='./assets/img/tour-3.png' alt='')
+                            .container__tour-item-content
+                                h3.container__tour-item-title Best Tours
+                                p.container__tour-item-decs
+                                    | Lorem ipsum dolor sit amet conse ctetur adip
+                                    | iscing elit Proin rhonc us urna dictum.
+                                a.container__tour-item-link(href='') View More
+        .grid.wide
+            .container-section
+                .container__title
+                    h5 PROMOTIONS
+                    h2
+                        | OUR BEST 
+                        span TOURS
+                .container__promotions.row
+                    +tourDisplayCard(tours[0],'destination-icon-1', 'yellow')
+                    +tourDisplayCard(tours[1],'destination-icon-2', 'pink')
+                    +tourDisplayCard(tours[2],'destination-icon-3', 'purple')
+
