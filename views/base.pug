@@ -6,20 +6,29 @@ html
             meta(name='viewport' content='width=device-width, initial-scale=1.0')
             link(href='https://fonts.googleapis.com/css?family=Lato:300,300i,700' rel='stylesheet')
             link(rel='stylesheet' href='/css/style.css')
+            link(rel='icon' href='/assets/img/icon.png')
+            link(rel='stylesheet' href='/assets/css/base.css')
+            link(rel='stylesheet' href='/assets/css/main.css')
+            link(rel='stylesheet' href='/assets/css/grid.css')
+            link(rel='stylesheet' href='/assets/css/responsive.css')
+
             link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
             title= `Natours | ${title}`
+            script(src='https://kit.fontawesome.com/c2bdfb3c2d.js' crossorigin='anonymous')
 
-    body 
-        //- HEADER
-        include _header
-        
-        //- CONTENT
-        block content
-            h1 this is a placeholder heading
+    body
+        #main 
+            //- HEADER
+            include _header
+            
+            //- CONTENT
+            #main
+            block content
+                    h1 this is a placeholder heading
 
-        //- FOOTER 
-        include _footer
-        //- JS
+            //- FOOTER 
+            include _footer
+            //- JS
         
         //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js')
         //- script(src='/js/mapbox.js')
