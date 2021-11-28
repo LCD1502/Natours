@@ -22,7 +22,9 @@ if (loginForm) {
 }
 
 const logoutBtn = document.querySelector('.nav__el--logout');
+const logoutBtn2 = document.querySelector('.nav__el--logout2');
 if (logoutBtn) logoutBtn.addEventListener('click', logout);
+if (logoutBtn2) logoutBtn2.addEventListener('click', logout);
 
 const userDataForm = document.querySelector('.form-user-data');
 if (userDataForm)

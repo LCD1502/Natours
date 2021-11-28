@@ -6,7 +6,7 @@
     align-items: center;
     padding: 20px 50px;
     position: fixed;
-    z-index: 10;
+    z-index: 15;
     background-color: rgba(0, 0, 0, 0.8);
     top: 0;
     right: 0;
@@ -15,6 +15,8 @@
 
 .header__logo {
     padding: 12px 12px 9px;
+    display: flex;
+    align-items: center;
 }
 
 .header__logo:hover {
@@ -23,6 +25,7 @@
 }
 
 .header__logo-img {
+    width: 70%;
 }
 
 .header__nav-list {
@@ -268,7 +271,7 @@ li.header__new-label > a::after {
 }
 
 .header__navbar-link {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     line-height: 3rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -739,6 +742,7 @@ li.header__new-label > a::after {
 .container__promotion-item {
     background-color: var(--white-color);
     border: 1px solid #f1f1f1;
+    margin: 16px 0;
 }
 
 .container__promotion-img-wrap {
@@ -975,10 +979,9 @@ li.header__new-label > a::after {
 } */
 
 .footer__middle {
-    /* background: url(../img/footer.jpg) center / cover no-repeat ;
-    width: 100%;
-    margin-top: 60px; */
-    /* padding: 36px 30px; */
+    background-color: #eee;
+    margin-top: 40px;
+    padding: 40px;
 }
 
 .footer__middle-content {
@@ -1050,6 +1053,7 @@ li.header__new-label > a::after {
 .footer__bottom {
     background-color: var(--green-color);
     align-items: center;
+    padding: 0 40px;
 }
 
 .footer__bottom-item {

@@ -7,7 +7,7 @@
     padding: 20px 50px;
     position: fixed;
     z-index: 10;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     top: 0;
     right: 0;
     left: 0;
@@ -23,7 +23,7 @@
 }
 
 .header__logo-img {
-    width: 67px;
+    width: 70%;
 }
 
 .header__nav-list {
@@ -76,7 +76,7 @@
 .header__subnav-children-link,
 .header__subnav-link {
     text-decoration: none;
-    text-transform: capitalize; 
+    text-transform: capitalize;
     color: #9a9a9a;
     font-size: 1.4rem;
     display: block;
@@ -85,7 +85,7 @@
 }
 
 li.header__hot-label > a::after {
-    content: "Hot";
+    content: 'Hot';
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 1rem;
@@ -98,7 +98,7 @@ li.header__hot-label > a::after {
 }
 
 li.header__best-label a::after {
-    content: "best";
+    content: 'best';
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 1rem;
@@ -111,7 +111,7 @@ li.header__best-label a::after {
 }
 
 li.header__new-label > a::after {
-    content: "New";
+    content: 'New';
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 1rem;
@@ -128,7 +128,7 @@ li.header__new-label > a::after {
 }
 
 .header__subnav-item-has--children > a::before {
-    content: "";
+    content: '';
     display: block;
     border-style: solid;
     border-width: 5px;
@@ -154,7 +154,7 @@ li.header__new-label > a::after {
 }
 
 .header__subnav-children-list::before {
-    content: "";
+    content: '';
     display: block;
     width: 24px;
     position: absolute;
@@ -209,7 +209,7 @@ li.header__new-label > a::after {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.03);
+    background-color: rgba(0, 0, 0, 0.03);
     display: none;
     animation: fadein linear 0.2s;
 }
@@ -315,7 +315,6 @@ li.header__new-label > a::after {
     margin-top: 36px;
 }
 
-
 .slider-home__category-name {
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -371,7 +370,12 @@ li.header__new-label > a::after {
 }
 
 .container__proposal-overlay {
-    background: linear-gradient(to bottom, rgba(101,100,96,0) 0%,rgba(101,100,96,0.1) 70%,rgba(101,100,96,0.5) 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(101, 100, 96, 0) 0%,
+        rgba(101, 100, 96, 0.1) 70%,
+        rgba(101, 100, 96, 0.5) 100%
+    );
     position: absolute;
     top: 0;
     right: 0;
@@ -421,7 +425,7 @@ li.header__new-label > a::after {
     text-transform: uppercase;
     margin-top: 10px;
     letter-spacing: 1.6px;
-} 
+}
 
 .container__proposal-fade-in {
     position: absolute;
@@ -499,7 +503,6 @@ li.header__new-label > a::after {
     font-size: 4.5rem;
     line-height: 4.5rem;
     font-weight: 800;
-
 }
 
 .container__banner-title > h1 {
@@ -618,11 +621,11 @@ li.header__new-label > a::after {
 }
 
 .container__beaches-countdown-item::after {
-    content: "/";
+    content: '/';
     display: block;
     font-size: 6rem;
     line-height: 6rem;
-    color: rgba(0,0,0,0.05);
+    color: rgba(0, 0, 0, 0.05);
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -863,7 +866,7 @@ li.header__new-label > a::after {
 }
 
 .container__promotiom-category-plus-name::before {
-    content: "";
+    content: '';
     border-style: solid;
     border-width: 6px;
     border-color: transparent transparent var(--text-color) transparent;
@@ -973,10 +976,8 @@ li.header__new-label > a::after {
 } */
 
 .footer__middle {
-    /* background: url(../img/footer.jpg) center / cover no-repeat ;
-    width: 100%;
-    margin-top: 60px; */
-    /* padding: 36px 30px; */
+    padding: 36px;
+    background-color: #eee;
 }
 
 .footer__middle-content {
@@ -1047,6 +1048,7 @@ li.header__new-label > a::after {
 .footer__bottom {
     background-color: var(--orange-color);
     align-items: center;
+    padding: 0 36px;
 }
 
 .footer__bottom-item {
@@ -1071,15 +1073,15 @@ li.header__new-label > a::after {
 
 /* Big red alert! */
 
- .fixed-bottom-price {
+.fixed-bottom-price {
     display: block;
     padding: 11px 16px 9px;
     background-color: var(--orange-color);
     border-radius: 30px;
     text-decoration: none;
- }
- .stickBook {
+}
+.stickBook {
     font-size: 1.4rem;
     color: var(--white-color);
     font-weight: 500;
- }
+}
