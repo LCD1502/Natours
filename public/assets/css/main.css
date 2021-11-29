@@ -184,6 +184,9 @@ li.header__new-label > a::after {
     display: block;
     padding: 12px;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .header__navbar-icon {
