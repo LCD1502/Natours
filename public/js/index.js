@@ -4,6 +4,8 @@ import '@babel/polyfill';
 import { login, logout } from './login';
 import { displayMap } from './mapbox';
 import { updateData, updatePassword } from './updateSettings';
+import { countDown } from './countDown';
+import { slideShow } from './slider';
 
 const mapBox = document.getElementById('map');
 if (mapBox) {
@@ -54,3 +56,13 @@ if (changePasswordForm)
         document.getElementById('password').value = '';
         document.getElementById('password-confirm').value = '';
     });
+// count down function
+const daysElement = document.getElementById('countDownDays');
+const hoursElement = document.getElementById('countDownHours');
+const minutesElement = document.getElementById('countDownMinutes');
+const secondsElement = document.getElementById('countDownSeconds');
+countDown(daysElement, hoursElement, minutesElement, secondsElement);
+
+// slider controls
+document.getElementById('radio1').checked = true;
+slideShow();

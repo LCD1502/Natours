@@ -1,287 +1,36 @@
-.slider-home
-    .grid.wide
-        .slider-home-content
-            h1
-                | Enjoy every 
-                span Moments
-            h4 LIFE IS LIVE
-.container
-    .grid.wide
-        .container-section
-            .container__title
-                h5 OUR PROPOSALS
-                h2
-                    | OUR 
-                    span DESTINATIONS
-            .container__proposals.row
-                .col.l-4.m-12.c-12
-                    .container__proposal-item
-                        img.container__proposal-img(src='./assets/img/destination-1.jpg')
-                        .container__proposal-overlay
-                        .container__proposal-fade-out
-                            .container__proposal-icon
-                                img(src='./assets/img/destination-icon-1.png')
-                            .container__proposal-title
-                                h4 Europe
-                                h5 3 Tours
-                        .container__proposal-fade-in
-                            h4 Tours
-                            .container__proposal-destinations
-                                a(href='') Berlin
-                                a(href='') Amsterdam
-                                a(href='') Tuscany
-                            a.container__proposal-view-btn(href='') VIEW DESTINATION
-                .col.l-4.m-12.c-12
-                    .container__proposal-item
-                        img.container__proposal-img(src='./assets/img/destination-2.jpg')
-                        .container__proposal-overlay
-                        .container__proposal-fade-out
-                            .container__proposal-icon
-                                img(src='./assets/img/destination-icon-2.png')
-                            .container__proposal-title
-                                h4 Thailandia
-                                h5 1 Tours
-                        .container__proposal-fade-in
-                            h4 Tours
-                            .container__proposal-destinations
-                                a(href='') Phuket
-                            a.container__proposal-view-btn(href='') VIEW DESTINATION
-                .col.l-4.m-12.c-12
-                    .container__proposal-item
-                        img.container__proposal-img(src='./assets/img/destination-3.jpg')
-                        .container__proposal-overlay
-                        .container__proposal-fade-out
-                            .container__proposal-icon
-                                img(src='./assets/img/destination-icon-3.png')
-                            .container__proposal-title
-                                h4 Asia
-                                h5 2 Tours
-                        .container__proposal-fade-in
-                            h4 Tours
-                            .container__proposal-destinations
-                                a(href='') Hong Kong
-                                a(href='') Phuket
-                            a.container__proposal-view-btn(href='') VIEW DESTINATION
-                .col.l-4.m-12.c-12
-                    .container__proposal-item
-                        img.container__proposal-img(src='./assets/img/destination-4.jpg')
-                        .container__proposal-overlay
-                        .container__proposal-fade-out
-                            .container__proposal-icon
-                                img(src='./assets/img/destination-icon-4.png')
-                            .container__proposal-title
-                                h4 Italy
-                                h5 1 Tours
-                        .container__proposal-fade-in
-                            h4 Tours
-                            .container__proposal-destinations
-                                a(href='') Tuscany
-                            a.container__proposal-view-btn(href='') VIEW DESTINATION
-                .col.l-4.m-12.c-12
-                    .container__proposal-item
-                        img.container__proposal-img(src='./assets/img/destination-5.jpg')
-                        .container__proposal-overlay
-                        .container__proposal-fade-out
-                            .container__proposal-icon
-                                img(src='./assets/img/destination-icon-5.png')
-                            .container__proposal-title
-                                h4 Netherlands
-                                h5 1 Tours
-                        .container__proposal-fade-in
-                            h4 Tours
-                            .container__proposal-destinations
-                                a(href='') Amsterdam
-                            a.container__proposal-view-btn(href='') VIEW DESTINATION
-                .col.l-4.m-12.c-12
-                    .container__proposal-item
-                        img.container__proposal-img(src='./assets/img/destination-6.jpg')
-                        .container__proposal-overlay
-                        .container__proposal-fade-out
-                            .container__proposal-icon
-                                img(src='./assets/img/destination-icon-6.png')
-                            .container__proposal-title
-                                h4 United States
-                                h5 1 Tours
-                        .container__proposal-fade-in
-                            h4 Tours
-                            .container__proposal-destinations
-                                a(href='') San Francisco
-                            a.container__proposal-view-btn(href='') VIEW DESTINATION
-    .container__banner
-        .grid.wide
-            .container__banner-wrap.row
-                .container__banner-title.col.l-4.m-12.c-12
-                    h2 Your
+.slider-container
+    .slider-container__list
+        input#radio1(type='radio' name='radio-btn')
+        input#radio2(type='radio' name='radio-btn')
+        input#radio3(type='radio' name='radio-btn')
+        .slider-home.slider-1.first
+            .grid.wide
+                .slider-home-content
                     h1
-                        | Next 
-                        span Holiday
-                .container__banner-view.col.l-4.m-12.c-12
-                    a(href='') VIEW ALL TOURS
-    .grid.wide
-        .container-section
-            .container__beaches.row
-                .col.l-4.m-12.c-12
-                    .container__beaches-content
-                        .container__title
-                            h5 NORTH AMERICA
-                            h2
-                                | The Best 
-                                span Beaches
-                        .container__beaches-description
-                            p
-                                | Lorem ipsum dolor sit amet, consectetur adip iscing elit. Proin rhoncus urna
-                                | dictum neque molestie ultricies mauris ac.
-                            p
-                                | Lorem ipsum dolor sit amet, consectetur adip iscing elit. Proin rhoncus urna
-                                | dictum neque molestie ultricies mauris ac.
-                        .container__beaches-price
-                            span.container__beaches-price-old 800
-                            span.container__beaches-price-current    500 $ 
-                            span.container__beaches-price-for / FOR PERSON
-                        .container__beaches-book-btn
-                            a(href='') BOOK NOW
-                .col.l-8.m-12.c-12
-                    .container__beaches-slider
-                        .container__beaches-slider-wrap
-                            .container__beaches-img
-                            .container__beaches-countdown.row
-                                .container__beaches-countdown-item.col.l-2.m-3.c-3
-                                    h3 000
-                                    h5 Days
-                                .container__beaches-countdown-item.col.l-2.m-3.c-3
-                                    h3 00
-                                    h5 Hours
-                                .container__beaches-countdown-item.col.l-2.m-3.c-3
-                                    h3 00
-                                    h5 Minutes
-                                .container__beaches-countdown-item.col.l-2.m-3.c-3
-                                    h3 00
-                                    h5 Seconds
-    .grid.wide
-        .container-section
-            .container__tours.row
-                .col.l-4.m-12.c-12
-                    .container__tour-item
-                        img.container__tour-item-img(src='./assets/img/tour-1.png' alt='')
-                        .container__tour-item-content
-                            h3.container__tour-item-title World Tour
-                            p.container__tour-item-decs
-                                | Lorem ipsum dolor sit amet conse ctetur adip
-                                | iscing elit Proin rhonc us urna dictum.
-                            a.container__tour-item-link(href='') View More
-                .col.l-4.m-12.c-12
-                    .container__tour-item
-                        img.container__tour-item-img(src='./assets/img/tour-2.png' alt='')
-                        .container__tour-item-content
-                            h3.container__tour-item-title Cruises
-                            p.container__tour-item-decs
-                                | Lorem ipsum dolor sit amet conse ctetur adip
-                                | iscing elit Proin rhonc us urna dictum.
-                            a.container__tour-item-link(href='') View More
-                .col.l-4.m-12.c-12
-                    .container__tour-item
-                        img.container__tour-item-img(src='./assets/img/tour-3.png' alt='')
-                        .container__tour-item-content
-                            h3.container__tour-item-title Best Tours
-                            p.container__tour-item-decs
-                                | Lorem ipsum dolor sit amet conse ctetur adip
-                                | iscing elit Proin rhonc us urna dictum.
-                            a.container__tour-item-link(href='') View More
-    .grid.wide
-        .container-section
-            .container__title
-                h5 PROMOTIONS
-                h2
-                    | OUR 
-                    span TOURS
-            .container__promotions.row
-                .col.l-4.m-12.c-12
-                    .container__promotion-item
-                        .container__promotion-img-wrap
-                            img.container__promotion-img(src='./assets/img/promotion-1.jpg')
-                            a.container__promotion-icon(href='' style='background: linear-gradient(to right, #ffd205 0%, #ff9b05 100%);')
-                                img(src='./assets/img/destination-icon-1.png')
-                        .container__promotion-content
-                            .container__promotion-destination
-                                a.container__promotion-city(href='')
-                                    h4 Berlin
-                                a.container__promotion-area(href='')
-                                    img.container__promotion-destination-icon(src='./assets/img/pin_icon.png' alt='')
-                                    h5 Europe
-                            .container__promotion-info
-                                .container__promotion-category
-                                    a(href='') Cultural
-                                    div
-                                        a(href='') Relax
-                                        .container__promotion-category-plus.background--yellow
-                                            span + 1
-                                            .container__promotiom-category-plus-name Sport
-                                .container__promotion-price
-                                    span.container__promotion-old-price
-                                    span.container__promotion-current-price 500 $
-                            .container__promotion-footer
-                                p.container__promotion-description
-                                    | Lorem ipsum dolor sit amet,
-                                    | consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum
-                                    | scelerisque.
-                                a.container__promotion-details-link.background--yellow(href='') DETAILS
-                .col.l-4.m-12.c-12
-                    .container__promotion-item
-                        .container__promotion-img-wrap
-                            img.container__promotion-img(src='./assets/img/promotion-2.jpg')
-                            a.container__promotion-icon(href='' style='background: linear-gradient(to right, #f76570 0%, #f78d65 100%)')
-                                img(src='./assets/img/destination-icon-3.png')
-                        .container__promotion-content
-                            .container__promotion-destination
-                                a.container__promotion-city(href='')
-                                    h4 Hong Kong
-                                a.container__promotion-area(href='')
-                                    img.container__promotion-destination-icon(src='./assets/img/pin_icon.png' alt='')
-                                    h5 Asia
-                            .container__promotion-info
-                                .container__promotion-category
-                                    a(href='') History
-                                    div
-                                        a(href='') Cultural
-                                        .container__promotion-category-plus.background--pink
-                                            span + 1
-                                            .container__promotiom-category-plus-name Sport
-                                .container__promotion-price
-                                    span.container__promotion-old-price 1000
-                                    span.container__promotion-current-price 500 $
-                            .container__promotion-footer
-                                p.container__promotion-description
-                                    | Lorem ipsum dolor sit amet,
-                                    | consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum
-                                    | scelerisque.
-                                a.container__promotion-details-link.background--pink(href='') DETAILS
-                .col.l-4.m-12.c-12
-                    .container__promotion-item
-                        .container__promotion-img-wrap
-                            img.container__promotion-img(src='./assets/img/promotion-3.jpg')
-                            a.container__promotion-icon(href='' style='background: linear-gradient(to right, #ba71da 0%, #da717b 100%);')
-                                img(src='./assets/img/destination-icon-6.png')
-                        .container__promotion-content
-                            .container__promotion-destination
-                                a.container__promotion-city(href='')
-                                    h4 San Francisco
-                                a.container__promotion-area(href='')
-                                    img.container__promotion-destination-icon(src='./assets/img/pin_icon.png' alt='')
-                                    h5 United States
-                            .container__promotion-info
-                                .container__promotion-category
-                                    a(href='') Sport
-                                    div
-                                        a(href='') Relax
-                                        .container__promotion-category-plus.background--purple
-                                            span + 1
-                                            .container__promotiom-category-plus-name Cultural
-                                .container__promotion-price
-                                    span.container__promotion-old-price
-                                    span.container__promotion-current-price 400 $
-                            .container__promotion-footer
-                                p.container__promotion-description
-                                    | Lorem ipsum dolor sit amet,
-                                    | consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum
-                                    | scelerisque.
-                                a.container__promotion-details-link.background--purple(href='') DETAILS
+                        | Enjoy every 
+                        span Moments
+                    h4 SLIDER 1
+        .slider-home.slider-2
+            .grid.wide
+                .slider-home-content
+                    h1
+                        | Enjoy every 
+                        span Moments
+                    h4 Slider 2
+        .slider-home.slider-3
+            .grid.wide
+                .slider-home-content
+                    h1
+                        | Enjoy every 
+                        span Moments
+                    h4 Slider 3
+        // Automatic slider
+        .navigation-auto
+            .auto-btn1
+            .auto-btn2
+            .auto-btn3
+        // Manual Slider
+        .navigation-manual
+            label.manual-btn(for='radio1')
+            label.manual-btn(for='radio2')
+            label.manual-btn(for='radio3')

@@ -287,8 +287,132 @@ li.header__new-label > a::after {
 
 /* Slider */
 /* Slider HOME */
+
+.slider-1 {
+    background: url(/img/tours/tour-4-1.jpg) bottom center / cover no-repeat;
+    width: 100%;
+    transition: all 0.6s ease;
+    flex: none;
+    margin-top: calc(0px - var(--header-height));
+    filter: brightness(96%);
+}
+
+.slider-2 {
+    background: url(/img/tours/tour-4-2.jpg) bottom center / cover no-repeat;
+    width: 100%;
+    transition: all 0.6s ease;
+    flex: none;
+    margin-top: calc(0px - var(--header-height));
+    filter: brightness(96%);
+}
+
+.slider-3 {
+    background: url(/img/tours/tour-4-3.jpg) bottom center / cover no-repeat;
+    width: 100%;
+    transition: all 0.6s ease;
+    flex: none;
+    margin-top: calc(0px - var(--header-height));
+    filter: brightness(96%);
+}
+
 .slider-home {
-    background: url(../../img/tours/tour-4-3.jpg) bottom center / cover no-repeat;
+    transition: 2s;
+}
+
+.slider-container__list input {
+    display: none;
+}
+
+.slider-container {
+}
+
+.slider-container__list {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    overflow: hidden;
+}
+
+/* manual navigation */
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 24%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid var(--orange-color);
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: var(--orange-color);
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -200%;
+}
+
+/* End manual navigation */
+
+/* Automatic Navigtaion */
+
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    bottom: 24%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div {
+    border: 2px solid var(--orange-color);
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: var(--orange-color);
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: var(--orange-color);
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: var(--orange-color);
+}
+
+/* End slider home */
+
+.slider-home {
+    /* background: url(../../img/tours/tour-4-3.jpg) bottom center / cover no-repeat; */
     margin-top: calc(60px - var(--header-height));
     filter: brightness(96%);
 }

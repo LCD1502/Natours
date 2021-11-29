@@ -29,14 +29,40 @@ mixin tourDisplayCard(tour, icon, background)
                     p.container__promotion-description= tour.summary
                     a(class=`container__promotion-details-link background--${background}`, href=`/tour/${tour.slug}`) DETAILS
 
-block content 
-    .slider-home
-        .grid.wide
-            .slider-home-content
-                h1
-                    | Enjoy every 
-                    span Moments
-                h4 LIFE IS LIVE
+block content
+    .slider-container
+        .slider-container__list
+            input#radio1(type='radio' name='radio-btn')
+            input#radio2(type='radio' name='radio-btn')
+            input#radio3(type='radio' name='radio-btn')
+            .slider-home.slider-1.first
+                .grid.wide
+                    .slider-home-content
+                        h1
+                            | Enjoy every 
+                            span Moments
+                        h4 New York
+            .slider-home.slider-2
+                .grid.wide
+                    .slider-home-content
+                        h1 Traveling is the spice of life
+                        h4 Los Angeles
+            .slider-home.slider-3
+                .grid.wide
+                    .slider-home-content
+                        h1 Let our experts plan your trip
+                        h4 San Francisco
+            // Automatic slider
+            .navigation-auto
+                .auto-btn1
+                .auto-btn2
+                .auto-btn3
+            // Manual Slider
+            .navigation-manual
+                label.manual-btn(for='radio1')
+                label.manual-btn(for='radio2')
+                label.manual-btn(for='radio3')
+
     .container
         .grid.wide
             .container-section
@@ -177,18 +203,18 @@ block content
                                 .container__beaches-img
                                 .container__beaches-countdown.row
                                     .container__beaches-countdown-item.col.l-2.m-3.c-3
-                                        h3 000
+                                        h3#countDownDays 000
                                         h5 Days
                                     .container__beaches-countdown-item.col.l-2.m-3.c-3
-                                        h3 00
+                                        h3#countDownHours 00
                                         h5 Hours
                                     .container__beaches-countdown-item.col.l-2.m-3.c-3
-                                        h3 00
+                                        h3#countDownMinutes 00
                                         h5 Minutes
                                     .container__beaches-countdown-item.col.l-2.m-3.c-3
-                                        h3 00
+                                        h3#countDownSeconds 00
                                         h5 Seconds
-        .grid.wide
+        .grid.wide 
             .container-section
                 .container__tours.row
                     .col.l-4.m-12.c-12
