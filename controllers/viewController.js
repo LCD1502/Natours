@@ -51,3 +51,9 @@ exports.getAccount = (req, res, next) => {
         title: 'Your Account',
     });
 };
+
+exports.getAboutUs = (req, res, next) => {
+    res.status(200).render('aboutus', {
+        title: 'About Us',
+    });
+};

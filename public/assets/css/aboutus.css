@@ -1,0 +1,481 @@
+/* About Us */
+
+.about-container {
+    margin-top: 80px;
+}
+
+.about-us {
+    font-size: 1.4rem;
+    color: #a3a3a3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+}
+
+.closeImg {
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.closeImg:hover,
+.closeImg:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prevImg,
+.nextImg {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    transform: translateY(-250%);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.slideImg {
+    display: none;
+}
+
+.slideImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.thumbNail-modal {
+    display: flex;
+}
+
+.thumbNail-modal img {
+    width: 100%;
+    height: 100%;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+img.demo {
+    opacity: 0.6;
+}
+
+img.active,
+img.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nextImg {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* modal galerry */
+
+.modal-image {
+    margin-bottom: 10px;
+}
+
+.gallery-modal {
+    display: flex;
+}
+
+.gallery-modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-img__container {
+    cursor: pointer;
+}
+
+.thumbNail-modal__item {
+    cursor: pointer;
+}
+
+.gap-img {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 15px;
+}
+
+.info-container {
+    padding-left: 60px;
+    border-radius: 5px;
+    background-color: #555555;
+}
+
+.info-column img {
+    width: 30px;
+    height: 100%;
+}
+
+.info-column {
+    display: flex;
+    padding: 20px 0;
+}
+
+.info-column__text {
+    padding-left: 15px;
+    color: #fff;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.info-column__text h3 {
+    font-weight: lighter;
+    line-height: 1.8rem;
+}
+
+.info-column__text p {
+    padding-top: 5px;
+}
+
+.contact-container {
+    margin-top: 30px;
+}
+
+.contact-container p,
+.contact-container h3 {
+    text-align: center;
+}
+
+.contact-text p {
+    color: #9a9a9a;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+}
+
+.contact-text h3 {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #555555;
+}
+
+.contact-form {
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #f9f9f9;
+    border-width: 1px;
+    border-color: #f1f1f1;
+    border-radius: 30px;
+    border-style: solid;
+    padding: 10px 20px;
+    -webkit-appearance: none;
+    color: #a3a3a3;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 200px;
+}
+
+.contact-form label {
+    margin: 10px 0;
+    font-size: 1.4rem;
+    color: #9a9a9a;
+}
+
+.contact-form .submit-btn {
+    width: 100%;
+    margin: auto;
+    background-color: #14b9d5;
+    border-width: 0px;
+    border-color: #fff;
+    border-radius: 30px;
+    border-style: solid;
+    padding: 10px 20px;
+    -webkit-appearance: none;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.contact-form .submit-btn:hover {
+    opacity: 0.9;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prevImg:hover,
+.nextImg:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* about Us banner */
+
+.about-us-banner {
+    height: 600px;
+    background: url(../img/slide-pk-4.jpg) bottom center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-promotion-container {
+}
+
+.banner-promotion {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.banner-promotion p {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #9a9a9a;
+}
+
+.banner-promotion h2 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.banner-promotion-item {
+    font-size: 1.6rem;
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dotted #f1f1f1;
+}
+
+.banner-video {
+    background-image: url(http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/slide-pk-1.jpg?id=1652) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+}
+
+.banner-video__play-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.bannver-video__play-btn-icon {
+    width: 70px;
+}
+
+.modal-video {
+    display: none;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(101, 100, 96, 1);
+    transition: fadeIn 2s linear;
+}
+
+.video-popup {
+    display: none;
+    z-index: 12;
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border: none;
+    transition: fadeIn 2s linear;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.visible {
+    display: block;
+}
+
+.close-video {
+    position: absolute;
+    right: 8px;
+    top: -15px;
+    font-weight: 900;
+    font-size: 28px;
+    color: #fff;
+    padding: 5px 10px;
+    border-bottom: none;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.close-video:hover {
+    opacity: 1;
+}
+
+.video-wrapper {
+    width: 1000px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 55.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* End About us */
+
+/* About us */
+
+.about-us-title {
+    font-size: 36px;
+}
+
+.about-us {
+    font-size: 14px;
+    line-height: 27px;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.first-paragraph {
+    padding-bottom: 30px;
+}
+
+.bigFirstLetter {
+    float: left;
+    padding: 28px 28px 28px 0;
+    font-size: 70px;
+    margin-bottom: 0;
+    line-height: 30px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container-wrapper {
+    margin: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo-slogan {
+    color: #878787;
+    text-align: center;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (max-width: 1023px) {
+    .about-us-banner {
+        height: 1000px;
+    }
+    .banner-video {
+        height: 346px;
+        margin-top: 10px;
+    }
+    .video-wrapper {
+        width: 700px;
+    }
+    .video-popup {
+        top: 370%;
+    }
+    .banner-promotion-container {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+}
