@@ -128,3 +128,7 @@ h4 {
 .background--purple {
     background-color: var(--purple-color);
 }
+
+.mt-40 {
+    margin-top: 40px;
+}

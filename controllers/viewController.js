@@ -1,4 +1,5 @@
 const Tour = require('../models/tourModel');
+const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
@@ -52,8 +53,16 @@ exports.getAccount = (req, res, next) => {
     });
 };
 
-exports.getAboutUs = (req, res, next) => {
+exports.getAboutUs = catchAsync(async (req, res, next) => {
+    const guides = await User.find({ role: 'guide' });
     res.status(200).render('aboutus', {
         title: 'About Us',
+        guides,
     });
-};
+});
+
+exports.getBooking = catchAsync(async (req, res, next) => {
+    res.status(200).render('booking', {
+        title: 'Booking',
+    });
+});

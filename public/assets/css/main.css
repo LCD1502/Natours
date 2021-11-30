@@ -188,7 +188,7 @@ li.header__new-label > a::after {
     padding: 12px;
     cursor: pointer;
     position: absolute;
-    top: 20px;
+    top: 0px;
     right: 20px;
 }
 
@@ -343,14 +343,14 @@ li.header__new-label > a::after {
 .navigation-manual {
     position: absolute;
     width: 100%;
-    bottom: 24%;
+    bottom: 29%;
     display: flex;
     justify-content: center;
 }
 
 .manual-btn {
     border: 2px solid var(--orange-color);
-    padding: 10px;
+    padding: 6px;
     border-radius: 15px;
     cursor: pointer;
     transition: 1s;
@@ -383,14 +383,14 @@ li.header__new-label > a::after {
 .navigation-auto {
     position: absolute;
     width: 100%;
-    bottom: 24%;
+    bottom: 29%;
     display: flex;
     justify-content: center;
 }
 
 .navigation-auto div {
     border: 2px solid var(--orange-color);
-    padding: 10px;
+    padding: 6px;
     border-radius: 15px;
     cursor: pointer;
     transition: 1s;

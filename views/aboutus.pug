@@ -99,37 +99,14 @@ block content
              source(src='./assets/video/love-travel.mp4' type='video/mp4')
     .grid.wide
         .about-us-staff.row
-            .staff-item.col.l-3.c-6.m-6
-                .staff-item__img
-                    img(alt='' src='./assets/img/staff-1.jpg')
-                .staff-item__text
-                    h3 Jane Mcallister
-                    h6 OWNER
-                    p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at portitor
-            .staff-item.col.l-3.c-6.m-6
-                .staff-item__img
-                    img(alt='' src='./assets/img/staff-2.jpg')
-                .staff-item__text
-                    h3 Mandy Johnsonr
-                    h6 CUSTOMER CARE
-                    p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at portitor
-            .staff-item.col.l-3.c-6.m-6
-                .staff-item__img
-                    img(alt='' src='./assets/img/staff-3.jpg')
-                .staff-item__text
-                    h3 Elly Spitch
-                    h6 CO-FOUNDER
-                    p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at portitor
-            .staff-item.col.l-3.c-6.m-6
-                .staff-item__img
-                    img(alt='' src='./assets/img/staff-4.jpg')
-                .staff-item__text
-                    h3 Hanna Zafron
-                    h6 SPECIALIST
-                    p
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at portitor
+            each guide in guides
+                .staff-item.col.l-3.c-6.m-6
+                    .staff-item__img
+                        img(alt='' src=`/img/users/${guide.photo}`)
+                    .staff-item__text
+                        h3= guide.name.split(' ')[0]
+                        h6= guide.role
+                        p= guide.email
+
 
 
