@@ -15,45 +15,45 @@ block content
                     p.about-us
                         | Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urna feugiat rutrum. Nam nulla ipsum, venenatis malesuada felis quis, ultricies convallis neque.
                         | Pellentesque tristique fringilla tempus. Ivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet viverra felis cras sagittis.
-                    .modal-image.col
-                        // Images used to open the lightbox
-                        .row.gallery-modal
-                            .gap-img.l-4.c-4.m-4.modal-img__container
-                                img.hover-shadow(src='./assets/img/slider.jpg' onclick='openModal();currentSlideImg(1)')
-                            .gap-img.l-4.c-4.m-4.modal-img__container
-                                img.hover-shadow(src='./assets/img/slider1.jpg' onclick='openModal();currentSlideImg(2)')
-                            .gap-img.l-4.c-4.m-4.modal-img__container
-                                img.hover-shadow(src='./assets/img/slider2.jpg' onclick='openModal();currentSlideImg(3)')
-                            .gap-img.l-12.c-12.m-12.modal-img__container
-                                img.hover-shadow(src='./assets/img/slider4.jpg' onclick='openModal();currentSlideImg(4)')
-                        // The Modal/Lightbox
-                        #myModal.modal
-                            .modal-content
-                                span.closeImg(onclick='closeModal()') &times;
-                                .slideImg
-                                    img(src='./assets/img/slider.jpg')
-                                .slideImg
-                                    img(src='./assets/img/slider1.jpg')
-                                .slideImg
-                                    img(src='./assets/img/slider2.jpg')
-                                .slideImg
-                                    img(src='./assets/img/slider4.jpg')
-                                // Next/previous controls
-                                a.prevImg(onclick='plusSlidesImg(-1)') &#x276E;
-                                a.nextImg(onclick='plusSlidesImg(1)') &#x276F;
-                                // Caption text
-                                .caption-container
-                                    p#caption
-                                // Thumbnail image controls
-                                .thumbNail-modal
-                                    .l-3.thumbNail-modal__item
-                                        img.demo(src='./assets/img/slider.jpg' onclick='currentSlideImg(1)')
-                                    .l-3.thumbNail-modal__item
-                                        img.demo(src='./assets/img/slider1.jpg' onclick='currentSlideImg(2)')
-                                    .l-3.thumbNail-modal__item
-                                        img.demo(src='./assets/img/slider2.jpg' onclick='currentSlideImg(3)')
-                                    .l-3.thumbNail-modal__item
-                                        img.demo(src='./assets/img/slider4.jpg' onclick='currentSlideImg(4)')
+                    .service-container
+                    .service-list.row
+                        .service-list__item.l-6
+                            img(src='assets/img/tour-1.png' alt='')
+                            .service-list__item-text
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula nullam augue ipsum dolor.
+                                a.service-btn(href='') Fly Promo
+                        .service-list__item.l-6
+                            img(src='assets/img/tour-3.png' alt='')
+                            .service-list__item-text
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula nullam augue ipsum dolor.
+                                a.service-btn(href='') City Travel
+                        .service-list__item.l-6
+                            img(src='assets/img/tour-2.png' alt='')
+                            .service-list__item-text
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula nullam augue ipsum dolor.
+                                a.service-btn(href='') CRUISES
+                        .service-list__item.l-6
+                            img(src='assets/img/tour-4.png' alt='')
+                            .service-list__item-text
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula nullam augue ipsum dolor.
+                                a.service-btn(href='') Relax Tours
+                        .service-list__item.l-6
+                            img(src='assets/img/tour-5.png' alt='')
+                            .service-list__item-text
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula nullam augue ipsum dolor.
+                                a.service-btn(href='') Hiking
+                        .service-list__item.l-6
+                            img(src='assets/img/tour-6.png' alt='')
+                            .service-list__item-text
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula nullam augue ipsum dolor.
+                                a.service-btn(href='') Climbing
+
                 .col.l-4.c-12.m-12
                     .info-container
                         .info-column
@@ -97,4 +97,39 @@ block content
     .about-us-banner
         video#myVideo(autoplay='' muted='' loop='')
              source(src='./assets/video/love-travel.mp4' type='video/mp4')
+    .grid.wide
+        .about-us-staff.row
+            .staff-item.col.l-3.c-6.m-6
+                .staff-item__img
+                    img(alt='' src='./assets/img/staff-1.jpg')
+                .staff-item__text
+                    h3 Jane Mcallister
+                    h6 OWNER
+                    p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at portitor
+            .staff-item.col.l-3.c-6.m-6
+                .staff-item__img
+                    img(alt='' src='./assets/img/staff-2.jpg')
+                .staff-item__text
+                    h3 Mandy Johnsonr
+                    h6 CUSTOMER CARE
+                    p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at portitor
+            .staff-item.col.l-3.c-6.m-6
+                .staff-item__img
+                    img(alt='' src='./assets/img/staff-3.jpg')
+                .staff-item__text
+                    h3 Elly Spitch
+                    h6 CO-FOUNDER
+                    p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at portitor
+            .staff-item.col.l-3.c-6.m-6
+                .staff-item__img
+                    img(alt='' src='./assets/img/staff-4.jpg')
+                .staff-item__text
+                    h3 Hanna Zafron
+                    h6 SPECIALIST
+                    p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at portitor
+
 
