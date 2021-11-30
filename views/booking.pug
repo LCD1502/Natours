@@ -1,4 +1,42 @@
 extends base
 
 block content 
-    h1 This is Booking Page
+    #booking.section
+        .section-center
+            .booking-container
+                .booking-row
+                    .col-md-7.col-md-push-5
+                        .booking-cta
+                            h1 Make a booking
+                            p
+                                | Booking is now to Discover some of our most popular trips on the hiking in organised groups with a guide between the islands or long weekend getaways for hiking and camping
+                    .col-md-4.col-md-pull-7
+                        .booking-form
+                            form
+                                .form-group
+                                    span.form-label Your Tour
+                                    select.form-control
+                                        option Gia Lai
+                                        option Vung Tau
+                                        option Nghe An
+                                    span.select-arrow
+                                .form-group
+                                    span.form-label Departing
+                                    input.form-control(type='date' required='')
+                                .form-group
+                                    .label-container
+                                        p.form-label DIFFICULTY:
+                                        p.form-span Very Hard
+                                .form-group
+                                    .label-container
+                                        p.form-label Price:
+                                        p.form-span $ 10000
+                                .form-group
+                                    span.form-label People
+                                    select.form-control
+                                        option 1-2
+                                        option 3-5
+                                        option 5+
+                                    span.select-arrow
+                                .form-btn
+                                    button.submit-btn Booking

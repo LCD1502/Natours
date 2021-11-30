@@ -41,7 +41,7 @@ if (userDataForm)
 
 const changePasswordForm = document.querySelector('.form-user-password ');
 if (changePasswordForm)
-    changePasswordForm.addEventListener('submit', async (e) => {
+    changePasswordForm.addEventListener('submit', async(e) => {
         e.preventDefault();
 
         document.querySelector('.btn--save-password').textContent = 'Updating....';
@@ -64,8 +64,8 @@ const secondsElement = document.getElementById('countDownSeconds');
 if (daysElement) countDown(daysElement, hoursElement, minutesElement, secondsElement);
 
 // slider controls
-const radioBtn = document.getElementById('radio1');
-if (radioBtn) radioBtn.checked = true;
-slideShow();
+// const radioBtn = document.getElementById('radio1');
+// if (radioBtn) radioBtn.checked = true;
+// slideShow();
 
 // about-us js
