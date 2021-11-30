@@ -1,0 +1,122 @@
+extends base
+
+block content 
+    .about-container
+        .grid.wide
+            .row
+                .col.l-8.c-12.m-12
+                    p.about-us.first-paragraph
+                        span.bigFirstLetter A
+                        | ivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urna feugiat rutrum. Nam nulla ipsum,
+                        |                                                         venenatis malesuada felis quis, ultricies convallis neque.
+                    //
+                        <br>
+                        <br>
+                    p.about-us
+                        | Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urna feugiat rutrum. Nam nulla ipsum, venenatis malesuada felis quis, ultricies convallis neque.
+                        | Pellentesque tristique fringilla tempus. Ivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet viverra felis cras sagittis.
+                    .modal-image.col
+                        // Images used to open the lightbox
+                        .row.gallery-modal
+                            .gap-img.l-4.c-4.m-4.modal-img__container
+                                img.hover-shadow(src='./assets/img/slider.jpg' onclick='openModal();currentSlideImg(1)')
+                            .gap-img.l-4.c-4.m-4.modal-img__container
+                                img.hover-shadow(src='./assets/img/slider1.jpg' onclick='openModal();currentSlideImg(2)')
+                            .gap-img.l-4.c-4.m-4.modal-img__container
+                                img.hover-shadow(src='./assets/img/slider2.jpg' onclick='openModal();currentSlideImg(3)')
+                            .gap-img.l-12.c-12.m-12.modal-img__container
+                                img.hover-shadow(src='./assets/img/slider4.jpg' onclick='openModal();currentSlideImg(4)')
+                        // The Modal/Lightbox
+                        #myModal.modal
+                            .modal-content
+                                span.closeImg(onclick='closeModal()') &times;
+                                .slideImg
+                                    img(src='./assets/img/slider.jpg')
+                                .slideImg
+                                    img(src='./assets/img/slider1.jpg')
+                                .slideImg
+                                    img(src='./assets/img/slider2.jpg')
+                                .slideImg
+                                    img(src='./assets/img/slider4.jpg')
+                                // Next/previous controls
+                                a.prevImg(onclick='plusSlidesImg(-1)') &#x276E;
+                                a.nextImg(onclick='plusSlidesImg(1)') &#x276F;
+                                // Caption text
+                                .caption-container
+                                    p#caption
+                                // Thumbnail image controls
+                                .thumbNail-modal
+                                    .l-3.thumbNail-modal__item
+                                        img.demo(src='./assets/img/slider.jpg' onclick='currentSlideImg(1)')
+                                    .l-3.thumbNail-modal__item
+                                        img.demo(src='./assets/img/slider1.jpg' onclick='currentSlideImg(2)')
+                                    .l-3.thumbNail-modal__item
+                                        img.demo(src='./assets/img/slider2.jpg' onclick='currentSlideImg(3)')
+                                    .l-3.thumbNail-modal__item
+                                        img.demo(src='./assets/img/slider4.jpg' onclick='currentSlideImg(4)')
+                .col.l-4.c-12.m-12
+                    .info-container
+                        .info-column
+                            img(src='./assets/img/placeholder.png' alt='placeholder')
+                            .info-column__text
+                                h3 ADDRESS
+                                p London Ave 232 - London
+                        .info-column
+                            img(src='./assets/img/smartphone.png' alt='smartphone')
+                            .info-column__text
+                                h3 PHONE
+                                p +0123456789
+                        .info-column
+                            img(src='./assets/img/edit.png' alt='email')
+                            .info-column__text
+                                h3 EMAIL
+                                p anhluong059@gmail.com
+                    .contact-container
+                        .contact-text
+                            p CONTACT US
+                            h3 Drop Us A Line
+                        form.contact-form(action='contact-about-us' method='post')
+                            label(for='email') Email: 
+                            input(type='text' name='email')
+                            label(for='message') Message: 
+                            textarea(name='message')
+                            input.submit-btn(type='submit' value='SEND NOW')
+            .logo-container
+                .logo-container-wrapper
+                    img(src='assets/img/tour-1.png')
+                    h4.logo-slogan OVER THE WORLD
+                .logo-container-wrapper
+                    img(src='assets/img/tour-2.png')
+                    h4.logo-slogan CRUISE TOUR
+                .logo-container-wrapper
+                    img(src='assets/img/tour-3.png')
+                    h4.logo-slogan CITY TRAVEL
+                .logo-container-wrapper
+                    img(src='assets/img/tour-4.png')
+                    h4.logo-slogan RELAX LOCATION
+    .about-us-banner
+        .grid.wide
+            .row
+                .banner-promotion-container.col.l-6.c-12.m-12
+                    .banner-promotion
+                        p PROMOTIONS
+                        h2 Destinations
+                        .banner-promotion-item
+                            h3 North America
+                            h3 $ 50
+                        .banner-promotion-item
+                            h3 North America
+                            h3 $ 50
+                        .banner-promotion-item
+                            h3 North America
+                            h3 $ 50
+                .banner-video.col.l-6.c-12.m-12
+                    a.banner-video__play-btn(href='#')
+                        img.bannver-video__play-btn-icon(src='./assets/img/icon-play.png' alt='icon-play')
+                #modal-video.modal-video
+                .video-popup
+                    a.close-video &times;
+                    // Modal content
+                    .video-wrapper
+                        .video-container
+                            iframe#iframe-video(width='1200' src='https://www.youtube.com/embed/UM1O-4ll-vU?autoplay=1' frameborder='0' allow='accelerometer; autoplay ; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')

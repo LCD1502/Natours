@@ -8,7 +8,7 @@
     --blue-color: #14b9d5;
     --green-color: #1bbc9b;
     --orange-color: #f3a46b;
-    --header-height: 104px;
+    --header-height: 80px;
 }
 
 * {
@@ -44,7 +44,7 @@ html {
     flex: 1;
 }
 
-.flex-2{
+.flex-2 {
     flex: 2;
 }
 
@@ -84,7 +84,7 @@ h4 {
 }
 
 .underline::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 14%;
     left: 0;

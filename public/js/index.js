@@ -4,6 +4,8 @@ import '@babel/polyfill';
 import { login, logout } from './login';
 import { displayMap } from './mapbox';
 import { updateData, updatePassword } from './updateSettings';
+import { countDown } from './countDown';
+import { slideShow } from './slider';
 
 const mapBox = document.getElementById('map');
 if (mapBox) {
@@ -22,7 +24,9 @@ if (loginForm) {
 }
 
 const logoutBtn = document.querySelector('.nav__el--logout');
+const logoutBtn2 = document.querySelector('.nav__el--logout2');
 if (logoutBtn) logoutBtn.addEventListener('click', logout);
+if (logoutBtn2) logoutBtn2.addEventListener('click', logout);
 
 const userDataForm = document.querySelector('.form-user-data');
 if (userDataForm)
@@ -52,3 +56,16 @@ if (changePasswordForm)
         document.getElementById('password').value = '';
         document.getElementById('password-confirm').value = '';
     });
+// count down function
+const daysElement = document.getElementById('countDownDays');
+const hoursElement = document.getElementById('countDownHours');
+const minutesElement = document.getElementById('countDownMinutes');
+const secondsElement = document.getElementById('countDownSeconds');
+if (daysElement) countDown(daysElement, hoursElement, minutesElement, secondsElement);
+
+// slider controls
+const radioBtn = document.getElementById('radio1');
+if (radioBtn) radioBtn.checked = true;
+slideShow();
+
+// about-us js

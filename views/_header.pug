@@ -7,7 +7,7 @@
         li.header__nav-item
             a.header__nav-link(href='/all-tours') ALL TOURS
         li.header__nav-item
-            a.header__nav-link(href='about-us') ABOUT US
+            a.header__nav-link(href='/about-us') ABOUT US
         li.header__nav-item
             a.header__nav-link(href='#') MORE
             ul.header__subnav-list
@@ -33,7 +33,7 @@
     // Navbar
     .navbar
         label.header__navbar-btn(for='navbar__input')
-            img.header__navbar-icon(src='./assets/img/bars_icon.png')
+            img.header__navbar-icon(src='/assets/img/bars_icon.png')
         input#navbar__input.header__navbar-input(type='checkbox' hidden='')
         label.header__navbar-overlay(for='navbar__input')
         nav.header__navbar
@@ -51,7 +51,7 @@
                 li.header__navbar-item
                     a.header__navbar-link(href='/all-tours') ALL TOURS
                 li.header__navbar-item
-                    a.header__navbar-link(href='') ABOUT US
+                    a.header__navbar-link(href='/about-us') ABOUT US
                 li.header__navbar-item
                     a.header__navbar-link(href='') MORE
                     ul.header__navbar-sub-list
@@ -70,7 +70,7 @@
                         a.header__navbar-link(href='') SIGN UP
                 else
                     li.header__navbar-item
-                        a.nav__el.nav__el--logout(href='#') Log out
+                        a.header__navbar-link.nav__el--logout2(href='#') Log out
 
 
 
