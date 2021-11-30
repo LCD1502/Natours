@@ -64,8 +64,6 @@ const secondsElement = document.getElementById('countDownSeconds');
 if (daysElement) countDown(daysElement, hoursElement, minutesElement, secondsElement);
 
 // slider controls
-const radioBtn = document.getElementById('radio1');
-if (radioBtn) radioBtn.checked = true;
-slideShow();
-
-// about-us js
+// const radioBtn = document.getElementById('radio1');
+// if (radioBtn) radioBtn.checked = true;
+// slideShow();
