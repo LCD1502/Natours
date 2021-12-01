@@ -5,6 +5,7 @@ import { login, logout } from './login';
 import { displayMap } from './mapbox';
 import { updateData, updatePassword } from './updateSettings';
 import { countDown } from './countDown';
+import { slideShow } from './slider';
 
 const mapBox = document.getElementById('map');
 if (mapBox) {
@@ -63,8 +64,7 @@ const secondsElement = document.getElementById('countDownSeconds');
 if (daysElement) countDown(daysElement, hoursElement, minutesElement, secondsElement);
 
 // slider controls
-// const radioBtn = document.getElementById('radio1');
-// if (radioBtn) radioBtn.checked = true;
-// slideShow();
+const radioBtn = document.getElementById('radio1');
+if (radioBtn) radioBtn.checked = true;
 
 //about-us js
