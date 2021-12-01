@@ -11,7 +11,6 @@ faqBtns.forEach(function(faqBtn) {
             faqBtn.className += " active";
             // faqContent[index].style.display = "block";
             faqBtn.childNodes[0].src = "./assets/img/icon-less-white.png";
-            console.log(faqBtn.childNodes[0]);
         }
     })
 });
