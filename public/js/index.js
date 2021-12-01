@@ -7,6 +7,17 @@ import { updateData, updatePassword } from './updateSettings';
 import { countDown } from './countDown';
 import { slideShow } from './slider';
 
+const daysElement = document.getElementById('countDownDays');
+const hoursElement = document.getElementById('countDownHours');
+const minutesElement = document.getElementById('countDownMinutes');
+const secondsElement = document.getElementById('countDownSeconds');
+if (daysElement) countDown(daysElement, hoursElement, minutesElement, secondsElement);
+
+// slider controls
+const radioBtn = document.getElementById('radio1');
+if (radioBtn) radioBtn.checked = true;
+
+
 const mapBox = document.getElementById('map');
 if (mapBox) {
     const locations = JSON.parse(mapBox.dataset.locations);
@@ -57,14 +68,5 @@ if (changePasswordForm)
         document.getElementById('password-confirm').value = '';
     });
 // count down function
-const daysElement = document.getElementById('countDownDays');
-const hoursElement = document.getElementById('countDownHours');
-const minutesElement = document.getElementById('countDownMinutes');
-const secondsElement = document.getElementById('countDownSeconds');
-if (daysElement) countDown(daysElement, hoursElement, minutesElement, secondsElement);
-
-// slider controls
-const radioBtn = document.getElementById('radio1');
-if (radioBtn) radioBtn.checked = true;
 
 //about-us js

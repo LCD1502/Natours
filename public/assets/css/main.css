@@ -46,7 +46,7 @@
     position: relative;
 }
 
-.header__nav-item :hover {
+.header__nav-item:hover>a {
     opacity: 0.7;
 }
 
@@ -74,6 +74,10 @@
     width: 190px;
     box-shadow: 0 3px 6px rgba(255, 255, 255, 0.8);
     display: none;
+}
+
+.header__subnav-item:hover a {
+    opacity: 0.7;
 }
 
 .header__subnav-children-link,

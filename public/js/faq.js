@@ -7,6 +7,7 @@ faqBtns.forEach(function(faqBtn) {
             faqBtn.className = faqBtn.className.replace(" active", "");
             // faqContent[index].style.display = "none";
             faqBtn.childNodes[1].src = "./assets/img/icon-add-white.png";
+            console.log('cac');
         } else {
             faqBtn.className += " active";
             // faqContent[index].style.display = "block";
