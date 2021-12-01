@@ -68,4 +68,4 @@ if (daysElement) countDown(daysElement, hoursElement, minutesElement, secondsEle
 // if (radioBtn) radioBtn.checked = true;
 // slideShow();
 
-// about-us js
+//about-us js
