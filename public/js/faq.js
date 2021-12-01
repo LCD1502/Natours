@@ -6,12 +6,12 @@ faqBtns.forEach(function(faqBtn) {
         if (faqBtn.className == "faq-list-item__title-icon active") {
             faqBtn.className = faqBtn.className.replace(" active", "");
             // faqContent[index].style.display = "none";
-            faqBtn.childNodes[1].src = "./assets/img/icon-add-white.png";
-            console.log('cac');
+            faqBtn.childNodes[0].src = "./assets/img/icon-add-white.png";
         } else {
             faqBtn.className += " active";
             // faqContent[index].style.display = "block";
-            faqBtn.childNodes[1].src = "./assets/img/icon-less-white.png";
+            faqBtn.childNodes[0].src = "./assets/img/icon-less-white.png";
+            console.log(faqBtn.childNodes[0]);
         }
     })
 });

@@ -357,7 +357,7 @@ li.header__new-label>a::after {
 .navigation-manual {
     position: absolute;
     width: 100%;
-    bottom: 29%;
+    bottom: 25%;
     display: flex;
     justify-content: center;
 }
@@ -399,7 +399,7 @@ li.header__new-label>a::after {
 .navigation-auto {
     position: absolute;
     width: 100%;
-    bottom: 29%;
+    bottom: 25%;
     display: flex;
     justify-content: center;
 }
