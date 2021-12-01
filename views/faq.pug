@@ -1,0 +1,113 @@
+extends base
+
+block content 
+    .grid.wide.mt-120
+        .row
+            .col.l-8.c-12.m-12
+                p.about-us.first-paragraph
+                    span.bigFirstLetter B
+                    | eing a travel agent is something that, naturally, comes with a lot of questions. Here are a few of our most commonly asked questions about working with a travel agent. We're here to set your mind at ease,
+                    |                 if you don't see your question here, send us an email, we love to talk to you!
+                //
+                    <br>
+                    <br>
+                p.about-us
+                    | Here are some kinds of questions that we often get asked
+                .faq-container
+                    h3
+                        | Most frequent questions - Customer
+                    .faq-list
+                        .faq-list-item
+                            .faq-list-item__title
+                                .faq-list-item__title-icon
+                                    img(src='./assets/img/icon-add-white.png' alt='')
+                                    // IMG tag is  Child 1 in JS
+                                p How to pay an online travel reservation ?
+                            .faq-content.collapsed
+                                p
+                                    | Pay by credit or debit card. The easiest way to pay for a hotel booking online is by using a credit card. You will need a credit card number to make a reservation online, and you can use that card to pay for the hotel deposit
+                                    | or the full price of your stay.
+                        .faq-list-item
+                            .faq-list-item__title
+                                .faq-list-item__title-icon
+                                    img(src='./assets/img/icon-add-white.png' alt='')
+                                p How to became a member in your agency ?
+                            .faq-content.collapsed
+                                p
+                                    | To register and get started on a Web site, follow these steps:
+                                    br
+                                    |  + Click the Sign In 
+                                    br
+                                    |  + Enter a current e-mail account 
+                                    br
+                                    | + Choose a password, and then re-enter it
+                        .faq-list-item
+                            .faq-list-item__title
+                                .faq-list-item__title-icon
+                                    img(src='./assets/img/icon-add-white.png' alt='')
+                                p Which currency do we accept in your agency ?
+                            .faq-content.collapsed
+                                p
+                                    | We accept United States Dollar, Swiss Franc, Euro,Cayman Island Dollar, British Pound
+                        .faq-list-item
+                            .faq-list-item__title
+                                .faq-list-item__title-icon
+                                    img(src='./assets/img/icon-add-white.png' alt='')
+                                p How can I change my money for my next holiday ?
+                            .faq-content.collapsed
+                                p
+                                    | Make sure to call your bank and credit card companies before you leave to let them know where you will be visiting. It will save you the hassle and embarrassment of your card being frozen when the bank and credit card companies
+                                    | see unusual transactions coming through.
+                    h3
+                        | Most frequent question - Partner
+                    .faq-list
+                        .faq-list-item
+                            .faq-list-item__title.partner
+                                .faq-list-item__title-icon
+                                    img(src='./assets/img/icon-add-white.png' alt='')
+                                    // IMG tag is  Child 1 in JS
+                                p How can you become your external partner ?
+                            .faq-content.collapsed
+                                p
+                                    | With travel restrictions in place across the globe amid the coronavirus pandemic, now might seem like an unusual time to become a travel agent. However, travelers need more guidance than ever to plan future trips, so your expertise
+                                    | will come in handy as people navigate travel in an ever-changing environment.
+                        .faq-list-item
+                            .faq-list-item__title.partner
+                                .faq-list-item__title-icon
+                                    img(src='./assets/img/icon-add-white.png' alt='')
+                                p Do you have any affiliate program for children ?
+                            .faq-content.collapsed
+                                p
+                                    | Wonderbly creates meaningful and magical personalized stories for kids. Kids can see themselves doing extraordinary things, learning about their own identity, and discover the world around them. The books help kids develop
+                                    | empathy, curiosity, and confidence..
+                        .faq-list-item
+                            .faq-list-item__title.partner
+                                .faq-list-item__title-icon
+                                    img(src='./assets/img/icon-add-white.png' alt='')
+                                p How can you get to work in your business ?
+                            .faq-content.collapsed
+                                p
+                                    | Online travel agents get thousands of website visitors from all over the world. Plus, they have positioned themselves as an authority on everything related to travel. So, people trust the recommendation they receive from OTAs.
+                        .faq-list-item
+                            .faq-list-item__title.partner
+                                .faq-list-item__title-icon
+                                    img(src='./assets/img/icon-add-white.png' alt='')
+                                p What and where are the headquarters of your company ?
+                            .faq-content.collapsed
+                                p
+                                    | Natourtravel SL – ESB38946257
+                                    br
+                                    |  Avenida Marítima 29 38700
+                                    br
+                                    |  Santa Cruz de La Palma La Palma – Canary Islands, SPAIN.
+            .col.l-4.c-12.m-12
+                .contact-container
+                    .contact-text
+                        p CONTACT US
+                        h3 Get In Touch
+                    form.contact-form(action='contact-about-us' method='post')
+                        label(for='email') Email: 
+                        input(type='text' name='email')
+                        label(for='message') Message: 
+                        textarea(name='message')
+                        input.submit-btn(type='submit' value='SEND NOW')

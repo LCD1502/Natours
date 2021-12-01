@@ -3,7 +3,6 @@
 .section {
     position: relative;
     height: 100vh;
-    margin-top: 80px;
 }
 
 .section .section-center {
@@ -14,6 +13,8 @@
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: 1.4rem;
+    margin-top: 80px;
+    padding-bottom: 20px;
 }
 
 .booking-container {

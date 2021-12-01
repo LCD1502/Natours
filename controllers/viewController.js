@@ -3,7 +3,7 @@ const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
-exports.getHome = catchAsync(async (req, res, next) => {
+exports.getHome = catchAsync(async(req, res, next) => {
     const toursDisplay = await Tour.find().sort('-ratingsAverage').limit(3);
     res.status(200).render('home', {
         title: 'Home',
@@ -11,7 +11,7 @@ exports.getHome = catchAsync(async (req, res, next) => {
     });
 });
 
-exports.getOverview = catchAsync(async (req, res, next) => {
+exports.getOverview = catchAsync(async(req, res, next) => {
     // 1) Get tour data from collection
     const tours = await Tour.find();
     // 2) Build template
@@ -22,7 +22,7 @@ exports.getOverview = catchAsync(async (req, res, next) => {
     });
 });
 
-exports.getTour = catchAsync(async (req, res, next) => {
+exports.getTour = catchAsync(async(req, res, next) => {
     const tour = await Tour.findOne({ slug: req.params.slug }).populate({
         path: 'reviews',
         fields: 'review rating user',
@@ -53,7 +53,7 @@ exports.getAccount = (req, res, next) => {
     });
 };
 
-exports.getAboutUs = catchAsync(async (req, res, next) => {
+exports.getAboutUs = catchAsync(async(req, res, next) => {
     const guides = await User.find({ role: 'guide' });
     res.status(200).render('aboutus', {
         title: 'About Us',
@@ -61,8 +61,14 @@ exports.getAboutUs = catchAsync(async (req, res, next) => {
     });
 });
 
-exports.getBooking = catchAsync(async (req, res, next) => {
+exports.getBooking = catchAsync(async(req, res, next) => {
     res.status(200).render('booking', {
         title: 'Booking',
+    });
+});
+
+exports.getFaq = catchAsync(async(req, res, next) => {
+    res.status(200).render('faq', {
+        title: 'Faq',
     });
 });

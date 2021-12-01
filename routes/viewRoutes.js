@@ -10,6 +10,7 @@ router.get('/', viewController.getHome);
 router.get('/all-tours', viewController.getOverview);
 router.get('/about-us', viewController.getAboutUs);
 router.get('/booking', viewController.getBooking);
+router.get('/faq', viewController.getFaq);
 router.get('/tour/:slug', viewController.getTour);
 router.get('/login', viewController.getLoginForm);
 
