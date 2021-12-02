@@ -9,6 +9,7 @@
     color: #a3a3a3;
 }
 
+
 /*service list start */
 
 .service-list__item {
@@ -30,7 +31,7 @@
     line-height: 13px;
     border-radius: 30px;
     border: solid #ffffff;
-    background-color: var(--orange-color);
+    background-color: var(--green-color);
     padding: 7px 20px;
     color: #ffffff;
     margin-top: 10px;
@@ -44,6 +45,7 @@
     color: #9a9a9a;
     letter-spacing: 1px;
 }
+
 
 /* service list end */
 
@@ -135,7 +137,7 @@
 .contact-form .submit-btn {
     width: 100%;
     margin: auto;
-    background-color: #14b9d5;
+    background-color: var(--green-color);
     border-width: 0px;
     border-color: #fff;
     border-radius: 30px;
@@ -151,12 +153,14 @@
     opacity: 0.9;
 }
 
+
 /* On hover, add a black background color with a little bit see-through */
 
 .prevImg:hover,
 .nextImg:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 
 /* about Us banner */
 
@@ -218,7 +222,9 @@
     color: #9a9a9a;
 }
 
+
 /* End About us banner */
+
 
 /* About us */
 
