@@ -1,6 +1,6 @@
 /* eslint-disable */
 var counter = 1;
-setInterval(function () {
+export const slideShow = setInterval(function () {
     const radioCounter = document.getElementById('radio' + counter);
     if (radioCounter) radioCounter.checked = true;
     counter++;

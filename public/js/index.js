@@ -5,7 +5,7 @@ import { login, logout } from './login';
 import { displayMap } from './mapbox';
 import { updateData, updatePassword } from './updateSettings';
 import { countDown } from './countDown';
-
+import { slideShow } from './slider';
 const mapBox = document.getElementById('map');
 if (mapBox) {
     const locations = JSON.parse(mapBox.dataset.locations);
