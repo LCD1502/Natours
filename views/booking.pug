@@ -16,25 +16,25 @@ block content
                                 .form-group
                                     span.form-label Your Tour
                                     select.form-control
-                                        option Gia Lai
-                                        option Vung Tau
-                                        option Nghe An
+                                        each tour in tours
+                                            option= tour.name
                                     span.select-arrow
+
                                 .form-group
                                     .label-container
                                         p.form-label Departing:
-                                        p.form-span 31/12/2021
+                                        p.form-span.departing 31/12/2021
                                 .form-group
                                     .label-container
                                         p.form-label DIFFICULTY:
-                                        p.form-span Very Hard
+                                        p.form-span.difficulty Very Hard
                                 .form-group
                                     .label-container
                                         p.form-label Price:
-                                        p.form-span $ 10000
+                                        p.form-span.price $ 10000
                                 .form-group
                                     .label-container
                                         p.form-label Max people:
-                                        p.form-span 10
+                                        p.form-span.maxGr 10
                                 .form-btn
                                     button.submit-btn Booking

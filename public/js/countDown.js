@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 export const countDown = (daysElement, hoursElement, minutesElement, secondsElement) => {
     var countDownDate = new Date('Dec 31, 2021 23:59:59').getTime();
 

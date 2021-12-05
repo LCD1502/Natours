@@ -2,7 +2,6 @@
 .cache
 node_modules/
 dev-data/
-/config.env
 public/js/bundle.js
 public/js/bundle.js.map
 test.pug

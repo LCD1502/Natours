@@ -56,5 +56,9 @@ if (changePasswordForm)
         document.getElementById('password-confirm').value = '';
     });
 // count down function
-
+const daysElement = document.getElementById('countDownDays');
+const hoursElement = document.getElementById('countDownHours');
+const minutesElement = document.getElementById('countDownMinutes');
+const secondsElement = document.getElementById('countDownSeconds');
+if (daysElement) countDown(daysElement, hoursElement, minutesElement, secondsElement);
 //about-us js

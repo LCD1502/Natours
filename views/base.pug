@@ -20,24 +20,23 @@ html
             script(src='https://kit.fontawesome.com/c2bdfb3c2d.js' crossorigin='anonymous')
 
     body
-        #main 
             //- HEADER
             include _header
             
             //- CONTENT
             #main
-            block content
-                    h1 this is a placeholder heading
+                block content
+                        h1 this is a placeholder heading
 
             //- FOOTER 
             include _footer
             //- JS
         
-        //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js')
-        //- script(src='/js/mapbox.js')
-        //- script(src='/js/login.js')
-        script(src='/js/bundle.js')
-        if title === 'Booking'
-            script(src='/js/booking.js')
-        if title === 'Faq'
-            script(src='/js/faq.js')
+            //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js')
+            //- script(src='/js/mapbox.js')
+            //- script(src='/js/login.js')
+            script(src='/js/bundle.js')
+            if title === 'Booking'
+                script(src='/js/booking.js')
+            if title === 'FAQ'
+                script(src='/js/faq.js')

@@ -5,7 +5,7 @@ mixin tourDisplayCard(tour, icon, background)
         .container__promotion-item
             .container__promotion-img-wrap 
                 img.container__promotion-img(src=`/img/tours/${tour.imageCover}`)
-                a.container__promotion-icon(href='' style='background: linear-gradient(to right, #1bbc9b 0%, #14b9d5 100%')
+                span.container__promotion-icon(href='' style='background: linear-gradient(to right, #1bbc9b 0%, #14b9d5 100%')
                     img(src=`./assets/img/${icon}.png`)
             .container__promotion-content
                 .container__promotion-destination
@@ -27,7 +27,23 @@ mixin tourDisplayCard(tour, icon, background)
                         span.container__promotion-current-price= `${tour.price} $`
                 .container__promotion-footer
                     p.container__promotion-description= tour.summary
-                    a(class=`container__promotion-details-link background--${background}`, href=`/tour/${tour.slug}`) DETAILS
+                    a(class=`btn container__promotion-details-link background--${background}`, href=`/tour/${tour.slug}`) DETAILS
+
+mixin tourProposal(tour)
+    .col.l-4.m-12.c-12
+        .container__proposal-item
+            img.container__proposal-img(src=`/img/tours/${tour.imageCover}` , alt=`${tour.name}`)
+            .container__proposal-overlay
+            .container__proposal-fade-out
+                //- .container__proposal-icon
+                //-     img(src='./assets/img/destination-icon-1.png')
+                .container__proposal-title
+                    h4= tour.locations[0].description
+                    h5= `and ${ tour.locations.length - 1} locations`
+            .container__proposal-fade-in
+                h4= tour.name
+                .container__proposal-destinations
+                a.container__proposal-view-btn(href=`/tour/${tour.slug}`) VIEW TOUR
 
 block content
     .slider-container
@@ -45,12 +61,12 @@ block content
             .slider-home.slider-2
                 .grid.wide
                     .slider-home-content
-                        h1 Traveling is the spice of life
+                        h1 Traveling is The Spice of Life
                         h4 Los Angeles
             .slider-home.slider-3
                 .grid.wide
                     .slider-home-content
-                        h1 Let our experts plan your trip
+                        h1 Let our Experts Plan your Trip
                         h4 San Francisco
             // Automatic slider
             .navigation-auto
@@ -72,90 +88,13 @@ block content
                         | OUR 
                         span DESTINATIONS
                 .container__proposals.row
-                    .col.l-4.m-12.c-12
-                        .container__proposal-item
-                            img.container__proposal-img(src='/img/tours/tour-1-cover.jpg')
-                            .container__proposal-overlay
-                            .container__proposal-fade-out
-                                //- .container__proposal-icon
-                                //-     img(src='./assets/img/destination-icon-1.png')
-                                .container__proposal-title
-                                    h4 Banff National Park
-                                    h5 and 2 locations
-                            .container__proposal-fade-in
-                                h4 The Forest Hiker
-                                .container__proposal-destinations
-                                a.container__proposal-view-btn(href='') VIEW TOUR
-                    .col.l-4.m-12.c-12
-                        .container__proposal-item
-                            img.container__proposal-img(src='/img/tours/tour-2-cover.jpg')
-                            .container__proposal-overlay
-                            .container__proposal-fade-out
-                                //- .container__proposal-icon
-                                //-     img(src='./assets/img/destination-icon-2.png')
-                                .container__proposal-title
-                                    h4 Lummus Park Beach
-                                    h5 and 3 locations
-                            .container__proposal-fade-in
-                                h4 The Sea Explorer
-                                .container__proposal-destinations
-                                a.container__proposal-view-btn(href='') VIEW TOUR
-                    .col.l-4.m-12.c-12
-                        .container__proposal-item
-                            img.container__proposal-img(src='/img/tours/tour-3-cover.jpg')
-                            .container__proposal-overlay
-                            .container__proposal-fade-out
-                                //- .container__proposal-icon
-                                //-     img(src='./assets/img/destination-icon-3.png')
-                                .container__proposal-title
-                                    h4 Aspen Highlands
-                                    h5 and 3 locations
-                            .container__proposal-fade-in
-                                h4 The Snow Adventurer
-                                .container__proposal-destinations
-                                a.container__proposal-view-btn(href='') VIEW TOUR
-                    .col.l-4.m-12.c-12
-                        .container__proposal-item
-                            img.container__proposal-img(src='/img/tours/tour-6-cover.jpg')
-                            .container__proposal-overlay
-                            .container__proposal-fade-out
-                                //- .container__proposal-icon
-                                //-     img(src='./assets/img/destination-icon-4.png')
-                                .container__proposal-title
-                                    h4 Point Dume Beach
-                                    h5 and 5 locations
-                            .container__proposal-fade-in
-                                h4 The Sports Lover
-                                .container__proposal-destinations
-                                a.container__proposal-view-btn(href='') VIEW TOUR
-                    .col.l-4.m-12.c-12
-                        .container__proposal-item
-                            img.container__proposal-img(src='/img/tours/tour-8-cover.jpg')
-                            .container__proposal-overlay
-                            .container__proposal-fade-out
-                                //- .container__proposal-icon
-                                //-     img(src='./assets/img/destination-icon-5.png')
-                                .container__proposal-title
-                                    h4 Natural Bridges National Monument
-                                    h5 and 3 locations
-                            .container__proposal-fade-in
-                                h4 The Star Gazer
-                                .container__proposal-destinations
-                                a.container__proposal-view-btn(href='') VIEW TOUR
-                    .col.l-4.m-12.c-12
-                        .container__proposal-item
-                            img.container__proposal-img(src='/img/tours/tour-9-cover.jpg')
-                            .container__proposal-overlay
-                            .container__proposal-fade-out
-                                //- .container__proposal-icon
-                                //-     img(src='./assets/img/destination-icon-6.png')
-                                .container__proposal-title
-                                    h4 Yellowknife
-                                    h5 only one location
-                            .container__proposal-fade-in
-                                h4 The Northern Lights
-                                .container__proposal-destinations
-                                a.container__proposal-view-btn(href='') VIEW TOUR
+                    +tourProposal(allTours[0])
+                    +tourProposal(allTours[1])
+                    +tourProposal(allTours[2])
+                    +tourProposal(allTours[3])
+                    +tourProposal(allTours[5])
+                    +tourProposal(allTours[8])
+                    
         .container__banner
             .grid.wide
                 .container__banner-wrap.row
@@ -165,18 +104,7 @@ block content
                             | Next 
                             span Holiday
                     .container__banner-view.col.l-4.m-12.c-12
-                        a(href='') VIEW ALL TOURS
-                        
-        //- .container__banner
-        //-     .grid.wide
-        //-         .container__banner-wrap.row
-        //-             .container__banner-title.col.l-4.m-12.c-12
-        //-                 h2 Your
-        //-                 h1
-        //-                     | Next 
-        //-                     span Holiday
-        //-             .container__banner-view.col.l-4.m-12.c-12
-        //-                 a(href='') VIEW ALL TOURS
+                        a.btn(href='/all-tours') VIEW ALL TOURS
         .grid.wide
             .container-section
                 .container__beaches.row
@@ -196,7 +124,7 @@ block content
                                 span.container__beaches-price-current    497 $ 
                                 span.container__beaches-price-for / FOR PERSON
                             .container__beaches-book-btn
-                                a(href='') BOOK NOW
+                                a.btn(href='') BOOK NOW
                     .col.l-8.m-12.c-12
                         .container__beaches-slider
                             .container__beaches-slider-wrap
@@ -225,7 +153,7 @@ block content
                                 p.container__tour-item-decs
                                     | Lorem ipsum dolor sit amet conse ctetur adip
                                     | iscing elit Proin rhonc us urna dictum.
-                                a.container__tour-item-link(href='') View More
+                                
                     .col.l-4.m-12.c-12
                         .container__tour-item
                             img.container__tour-item-img(src='./assets/img/tour-2.png' alt='')
@@ -234,7 +162,7 @@ block content
                                 p.container__tour-item-decs
                                     | Lorem ipsum dolor sit amet conse ctetur adip
                                     | iscing elit Proin rhonc us urna dictum.
-                                a.container__tour-item-link(href='') View More
+                                
                     .col.l-4.m-12.c-12
                         .container__tour-item
                             img.container__tour-item-img(src='./assets/img/tour-3.png' alt='')
@@ -243,7 +171,7 @@ block content
                                 p.container__tour-item-decs
                                     | Lorem ipsum dolor sit amet conse ctetur adip
                                     | iscing elit Proin rhonc us urna dictum.
-                                a.container__tour-item-link(href='') View More
+                                
         .grid.wide
             .container-section
                 .container__title

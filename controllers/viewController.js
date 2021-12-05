@@ -4,9 +4,11 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
 exports.getHome = catchAsync(async (req, res, next) => {
+    const allTours = await Tour.find();
     const toursDisplay = await Tour.find().sort('-ratingsAverage').limit(3);
     res.status(200).render('home', {
         title: 'Home',
+        allTours,
         tours: toursDisplay,
     });
 });
@@ -62,6 +64,7 @@ exports.getAboutUs = catchAsync(async (req, res, next) => {
 });
 
 exports.getBooking = catchAsync(async (req, res, next) => {
+    const tours = await Tour.find();
     if (!req.user) {
         res.status(200).render('login', {
             title: 'Log in',
@@ -69,6 +72,7 @@ exports.getBooking = catchAsync(async (req, res, next) => {
     } else {
         res.status(200).render('booking', {
             title: 'Booking',
+            tours,
         });
     }
 });
