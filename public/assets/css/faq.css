@@ -20,6 +20,11 @@
     margin-inline-end: 0px;
 }
 
+.faq-list-item__title {
+    display: flex;
+    align-items: center;
+}
+
 .faq-list-item__title-icon {
     background-color: rgb(221, 153, 51);
     cursor: pointer;
@@ -39,7 +44,7 @@
     height: 0;
 }
 
-.partner>div:first-child {
+.partner > div:first-child {
     background-color: rgb(129, 215, 66);
 }
 
@@ -82,6 +87,5 @@
 .mt-160 {
     margin-top: 160px;
 }
-
 
 /* END FAQ  */

@@ -80,6 +80,12 @@
         padding: 100px 0;
     }
 
+    /* slider */
+    .navigation-auto,
+    .navigation-manual {
+        display: none;
+    }
+
     /* header */
     .header {
         padding: 20px;

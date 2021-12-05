@@ -36,25 +36,25 @@ form.onclick = () => {
             departing.textContent = '23/03/2022';
             difficulty.textContent = 'difficult';
             maxGr.textContent = 10;
-            price.textContent = '$ ' + 997;
+            price.textContent = '$ ' + 1197;
             break;
         case 5:
             departing.textContent = '11/03/2022';
             difficulty.textContent = 'ease';
             maxGr.textContent = 20;
-            price.textContent = '$ ' + 1197;
+            price.textContent = '$ ' + 2997;
             break;
         case 6:
             departing.textContent = '19/07/2022';
             difficulty.textContent = 'difficult';
             maxGr.textContent = 8;
-            price.textContent = '$ ' + 2997;
+            price.textContent = '$ ' + 1497;
             break;
         case 7:
             departing.textContent = '05/08/2022';
             difficulty.textContent = 'medium';
             maxGr.textContent = 15;
-            price.textContent = '$ ' + 1497;
+            price.textContent = '$ ' + 1997;
             break;
         case 8:
             departing.textContent = '16/12/2022';
